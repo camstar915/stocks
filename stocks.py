@@ -51,7 +51,7 @@ print('{:<10s}{:>15}{:>15}{:>15}{:>10}{:>15}{:>15}{:>15}'.format('Company', 'Cur
 for key in currentPrice:
     print('{:<10s}{:>15}{:>15}{:>15}{:>10}{:>15}{:>15}{:>15}'.format(key, currentPrice.get(key), "%.2f" % soldAt.get(key), "%.2f" % round(soldAt.get(key)-float(currentPrice.get(key)), 2), str(portfolio.get(key)) + 'x', "%.2f" % round(float(currentPrice.get(key)) * portfolio.get(key), 2), "%.2f" % round(float(soldAt.get(key)) * portfolio.get(key), 2), "%.2f" % round((float(soldAt.get(key))*portfolio.get(key))-float((float(currentPrice.get(key)) * portfolio.get(key))), 2)))
 print(dashTotal)
-print('{:<10s}{:>100}'.format('Total', soldAt['total'] - totalCurrent))
+print('{:<10s}{:>100}'.format('Total', "%.2f" % round(soldAt['total'] - totalCurrent, 2)))
 
 
 
